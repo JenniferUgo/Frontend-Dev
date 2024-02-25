@@ -17,8 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 200px;
   height: 300px;
+  
 }
 .number {
   width: 100px;
@@ -68,6 +70,7 @@ body {
 
 .feedback .title {
   margin-bottom: 10px;
+  margin-top: 30px;
   color: #fff;
 }
 
@@ -79,7 +82,7 @@ body {
 .container2 {
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -115,6 +118,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 /* Space between icon and text */
@@ -124,7 +130,7 @@ body {
 } */
 
 .score:nth-child(2) {
-  background-color: pink;
+  background-color: #fde8fd;
 }
 
 .score:nth-child(3) {
@@ -132,11 +138,11 @@ body {
 }
 
 .score:nth-child(4) {
-  background-color: lightgreen;
+  background-color: #e5fff9;
 }
 
 .score:nth-child(5) {
-  background-color: lightpink;
+  background-color: #e1e1ff;
 }
 
 .label {
@@ -146,22 +152,26 @@ body {
 
 .label-reaction {
   color: red;
+  font-weight: bold;
 }
 
 .label-memory {
-  color: yellowgreen;
+  color: #e7ec10;
+  font-weight: bold;
 }
 
 .label-verbal {
-  color: yellow;
+  color: #008e6c;
+  font-weight: bold;
 }
 
 .label-visual {
   color: purple;
+  font-weight: bold;
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 15px;
   background-color: #3c4866;
   color: white;
   align-items: center;
