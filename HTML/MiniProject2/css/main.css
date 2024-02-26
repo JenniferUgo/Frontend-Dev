@@ -36,11 +36,22 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  max-width: 280px;
+  max-width: 340px;
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title .fa-star {
+  color: purple;
+  padding-right: 10px;
+  padding-top: 6px;
 }
 
 h1 {
@@ -62,20 +73,37 @@ h1 {
   justify-content: space-between;
 }
 
+.accordion-item .fa-plus {
+  height: 15px;
+  width: 15px;
+  align-items: center;
+  background-color: purple;
+  color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.accordion-item .fa-minus {
+  height: 15px;
+  width: 15px;
+  align-items: center;
+  background-color: black;
+  color: #f0f0f0;
+  border-radius: 50%;
+}
+
 .accordion-item-header {
   cursor: pointer;
   font-weight: bold;
   font-size: 12px;
-  transition: background-color 0.3s ease-in-out;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .accordion-item-content {
   font-size: 10px;
   padding: 5px 10px;
-  padding-left: 40px;
+  padding-left: 0px;
   display: contents;
-  /*transition: display 0.3s ease-in-out;*/
+  display: flex;
 }
 
 .accordion-item-header:hover,
