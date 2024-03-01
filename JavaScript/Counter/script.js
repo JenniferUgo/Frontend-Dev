@@ -1,9 +1,7 @@
-let count = 0; 
+    let count = 0;
+    
+    document.getElementById('incrementButton').onclick = function() {
+        count++; 
+        document.getElementById('counter').innerHTML = count;   
+    } 
 
-function incrementCount() {
-    const counterDisplay = document.getElementById('counter');  
-    count++; 
-    counterDisplay.innerHTML = count; 
-};  
-
-document.querySelector('button').onclick = incrementCount; 
