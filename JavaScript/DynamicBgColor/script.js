@@ -1,5 +1,11 @@
-function changeBgColor() {
-    const body = document.body;
-    const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    body.style.backgroundColor = "#" + randomColor;
+let color = 0;
+const colors = ["red", "blue", "green", "yellow", "purple", "orange", "black", "pink", "brown"];
+
+document.getElementById('changeColorBtn').onclick = function() {
+    document.body.style.backgroundColor = colors[color];
+    color = (color + 1) % colors.length; 
 }
+
+
+
+ 
