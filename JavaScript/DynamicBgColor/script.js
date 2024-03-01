@@ -1,9 +1,9 @@
-let color = 0;
+let colorIndex = 0;
 const colors = ["red", "blue", "green", "yellow", "purple", "orange", "black", "pink", "brown"];
 
 document.getElementById('changeColorBtn').onclick = function() {
-    document.body.style.backgroundColor = colors[color];
-    color = (color + 1) % colors.length; 
+    document.body.style.backgroundColor = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length; 
 }
 
 
