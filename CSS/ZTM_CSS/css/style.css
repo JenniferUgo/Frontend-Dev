@@ -1,0 +1,56 @@
+body {
+    
+    background-image: url(/images/bkgroundimage.jpg);
+    background-size: cover;
+}
+
+/* * calls all elements
+* {
+    text-align: right;
+}
+*/
+
+/* makes 2 properties have the same design */
+h2, p {
+    /**color: #aa4139;*/
+    text-align: center;
+    border: none;
+    outline: 5px dashed rgba(255, 176, 170, 0.5);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    display: inline-block  ;
+}
+
+p {
+    color: green;
+}
+
+.webtext {
+    border: 5px solid green;
+}
+
+.active {
+    color: red;
+}
+
+#div1 {
+    background: rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.dec {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    border: none; 
+    background: none;
+}
+
