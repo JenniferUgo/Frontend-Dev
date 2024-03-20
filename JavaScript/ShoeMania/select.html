@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeMania</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img 
+        class="logo"
+        src="images/logo.png" 
+        alt="Brand Logo"
+        />
+        <h1>VIATU</h1>
+        <a href="/index.html" target="_self">Home</a>
+    </header>
+
+    <main>
+        <section id="item-details">
+            <div class="item">
+                <h3 id="itemName"></h3>
+                <p id="itemPrice"></p>
+                <p id="itemCode"></p>
+            </div>
+            <!-- Add more details about item -->
+        </section>
+<br>
+        <label>Enter Quantity</label>
+        <input type="number" id="quantity"/> <br/>
+
+        <label>Select Delivery Location</label>
+        <select name="" id="location">
+            <option value="">Choose location</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Abia">Abia</option>
+            <option value="Uyo">Uyo</option>
+        </select>
+
+        <h4 id="total"></h4>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Viatu Shoe Store</p>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/select.js"></script>
+</body>
+</html>

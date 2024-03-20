@@ -9,7 +9,7 @@ let result = addition(10,20)
 console.log(result)
 
 
-//Substraction
+//Subtraction
 console.log("Subtraction Task")
 function subtraction(num1, num2) {
     return num1 + num2
@@ -61,3 +61,8 @@ const car = {
 
 //4 wheel drive or not
 // 5 seater or 2 seater or 4 seater
+
+//arrow function
+console.log("   ")
+let blue = (a, b) => a + b
+console.log(blue(4,5));
