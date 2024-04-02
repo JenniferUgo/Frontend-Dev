@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Personal Diary - Sign Up</title>
+</head>
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <main>
+        <label>Register</label>
+            <input type="text" id="signup-username" placeholder="enter username">
+            <input type="text" id="signup-email" placeholder="Email" required>
+            <input type="text" id="signup-password" placeholder="Password">
+            <button id="register">Sign Up</button>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+    <script src="JS/config.js"></script>
+    <script src="JS/signup.js"></script>
+</body>
+</html>

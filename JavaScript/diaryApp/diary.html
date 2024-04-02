@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Personal Diary</title>
+</head>
+<body>
+    <header>
+        <h1>My Diary</h1>
+        <button id="signout-button">Sign Out</button>
+    </header>
+    <main>
+        <div id="diary-form">
+            <input type="text" id="entry-title" placeholder="Title">
+            <textarea id="entry-content" placeholder="Write your diary entry here"></textarea>
+            <button id="save-entry">Save</button>
+        </div>
+        <h2>Diary Entries</h2>
+        <ul id="diary-list"></ul>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    
+    <script src="JS/config.js"></script>
+    <script src="JS/diary.js"></script>
+</body>
+</html>
