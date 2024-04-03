@@ -9,10 +9,10 @@ firebase.auth().onAuthStateChanged(async (user) => {
         })
         .catch((error) => {
           console.log(error.code),
-          console.error("Signout error", error.message);
+            console.error("Signout error", error.message);
         });
     });
-    document.getElementById("username").innerHTML = user.displayName;
+// document.getElementById("username").innerHTML = user.displayName;
 
     console.log(user);
     console.log(user.uid);
@@ -21,3 +21,24 @@ firebase.auth().onAuthStateChanged(async (user) => {
     window.location.href = "signin.html";
   }
 });
+
+document.getElementById("save-entry").addEventListener("click", async () => {
+  try {
+    const title = document.getElementById("entry-title").value;
+    const content = document.getElementById("entry-content").value;
+    
+    await firebase.firestore().collection("diaryEntries").doc().set({
+      title,
+      content,
+    });
+
+    console.log("Diary entry saved!");
+  } catch (error) {
+    console.log(error.code);
+    console.error("Diary Error: ", error.message);
+  }
+});
+
+
+
+

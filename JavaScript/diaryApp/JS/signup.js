@@ -12,7 +12,7 @@ document.getElementById("register").addEventListener("click", async (e) => {
       displayName: username,
     })
 
-    const userId = userCredential.user.uid;
+    let userId = userCredential.user.uid
 
     await firebase.firestore().collection('users').doc(userId).set({
       username,
@@ -22,7 +22,6 @@ document.getElementById("register").addEventListener("click", async (e) => {
 
       window.location.href = "diary.html";
   } catch (error) {
-    console.log(e)
     console.log(error.code);
     console.error("Signup Error: ", error.message);
   }
