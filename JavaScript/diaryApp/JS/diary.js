@@ -27,7 +27,9 @@ firebase.auth().onAuthStateChanged(async (user) => {
             title,
             content,
             userId: user.uid,
-            username: user.displayName
+            username: user.displayName,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                
           });
 
           console.log("Diary entry saved!");
@@ -47,6 +49,7 @@ async function loadDiaryEntries(userId) {
     .firestore()
     .collection("diaryEntries")
     .where("userId", "==", userId)
+    .orderBy("timestamp", "desc")
     .get();
 
   const diaryList = document.getElementById("diary-list");
