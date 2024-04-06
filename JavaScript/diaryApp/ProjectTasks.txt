@@ -1,0 +1,17 @@
+Project Description:
+
+Create a web application that allows users to create and manage their personal 
+diary entries. Users should be able to sign up, sign in, and securely manage their 
+diary entries. Each diary entry should include a title, content, and a timestamp. Users should be able to create, read, update, and delete their diary entries. All data should be stored securely using Firebase Authentication and Firestore.
+
+Project Tasks:
+
+Set up a new Firebase project and enable Authentication and Firestore.
+Design the user interface using HTML and CSS. The interface should include:
+Sign up form
+Sign in form
+Diary entry list
+Form for creating/editing diary entries
+Implement Firebase Authentication to allow users to sign up and sign in securely.
+Create JavaScript functions to handle user authentication (sign up, sign in, sign out)
+and interaction with Firestore (creating, reading, updating, deleting diary entries).
