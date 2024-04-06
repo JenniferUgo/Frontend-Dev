@@ -7,12 +7,47 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
+    color: aliceblue;
+    background-color: brown;
 }
 
-.hidden {
-    display: none;
+
+#signout-button {
+    background-color: bisque;
+    color: brown;
 }
 
+#save-entry {
+    background-color: brown;
+    color: bisque;
+}
+
+.signup {
+    background-color: brown;
+    color: bisque;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.signup:hover {
+    background-color: bisque;
+    color: brown;
+}
+
+.signin {
+    background-color: brown;
+    color: bisque;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 10px;
+    
+}
+
+.signin:hover {
+    background-color: bisque;
+    color: brown;
+}
 
 #diary-form textarea { 
     width: 100%; 
@@ -21,5 +56,6 @@ header {
 
 
 #diary-list li { 
+    font-size: 12px;
     margin-bottom: 10px;
 } 

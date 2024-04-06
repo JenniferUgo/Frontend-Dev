@@ -3,7 +3,7 @@ document.getElementById("login").addEventListener("click", async () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const userCredential = await firebase
+    let userCredential = await firebase
       .auth()
       .signInWithEmailAndPassword(email, password);
 
