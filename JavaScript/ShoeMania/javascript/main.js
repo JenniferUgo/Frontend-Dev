@@ -31,3 +31,4 @@ document.getElementById("itemSelectFemale").onclick = function () {
     let url = '/select.html' + '?' + femaleShoe1.code
     window.open(url, '_blank')
 }
+

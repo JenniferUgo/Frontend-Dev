@@ -15,11 +15,22 @@ header {
 #signout-button {
     background-color: bisque;
     color: brown;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #save-entry {
     background-color: brown;
     color: bisque;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#save-entry:hover {
+    background-color: bisque;
+    color: brown;
 }
 
 .signup {
@@ -28,6 +39,7 @@ header {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .signup:hover {
@@ -41,6 +53,7 @@ header {
     text-decoration: none;
     padding: 5px 14px;
     border-radius: 10px;
+    cursor: pointer;
     
 }
 
@@ -51,11 +64,40 @@ header {
 
 #diary-form textarea { 
     width: 100%; 
-    height: 150px; 
+    height: 50px; 
+    margin-top: 10px;
 } 
 
 
-#diary-list li { 
-    font-size: 12px;
-    margin-bottom: 10px;
+#diary-list { 
+    font-size: 16px;
+    cursor: pointer;
 } 
+
+#signOut {
+    background-color: brown;
+    color: bisque;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 10px;
+    
+}
+
+#signOut:hover {
+    background-color: bisque;
+    color: brown;
+}
+
+#backButton {
+    background-color: brown;
+    color: bisque;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 10px;
+    
+}
+
+#backButton:hover {
+    background-color: bisque;
+    color: brown;
+}

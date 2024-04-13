@@ -12,6 +12,8 @@ firebase.auth().onAuthStateChanged(async (user) => {
         }
       });
 
+
+
     //loadDiaryEntries(user.uid);
 
     document
@@ -21,7 +23,9 @@ firebase.auth().onAuthStateChanged(async (user) => {
           const title = document.getElementById("entry-title").value;
           const content = document.getElementById("entry-content").value;
 
-          await firebase.firestore().collection("diaryEntries").doc().set({
+          let entry = await firebase.firestore().collection("diaryEntries").doc()
+
+          entry.set({
             title,
             content,
             userId: user.uid,
@@ -34,7 +38,7 @@ firebase.auth().onAuthStateChanged(async (user) => {
           console.log(error.code);
           console.error("Diary Error: ", error.message);
         }
-        window.location.reload();
+        // window.location.reload();
       });
 
     let loadDiaryEntries = await firebase
@@ -48,29 +52,27 @@ firebase.auth().onAuthStateChanged(async (user) => {
       let userName = entryDoc.data().username;
       let entryTitle = entryDoc.data().title;
       let entryContent = entryDoc.data().content;
+      let entryId = entryDoc.data().entry
 
       let userId = user.uid;
-      console.log(userId);
-      console.log(entryUserId);
-      if (userId == entryUserId) {
-        diaryContent += '<div class="diaryEntry">';
-        // diaryContent += "<p>" + entryUserId + "</p>";
-        diaryContent += "<p>" + userName + "</p>";
-        diaryContent += "<p>" + entryTitle + "</p>";
-        diaryContent += "<p>" + entryContent + "</p>";
 
+      if (userId == entryUserId) {
+        diaryContent += `<div class='diaryEntry' onclick='navigateToDisplayPage("${entryId}")'>`;
+        diaryContent += `<p>${userName}</p>`;
+        diaryContent += `<p>${entryTitle}</p>`;
+        diaryContent += `<p>${entryContent}</p>`;
         diaryContent += "</div>";
 
-        console.log(entryUserId);
-        console.log(userName)
-        console.log(entryTitle);
-        console.log(entryContent);
       } else {
         console.log("Not your account");
       }
     });
 
     $("#diary-list").append(diaryContent);
+
+    window.navigateToDisplayPage = (entryId) => {
+      window.location.href = `display.html?${entryId}`;
+    };
   } else {
     window.location.href = "signin.html";
   }
