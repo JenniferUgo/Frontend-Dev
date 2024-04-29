@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.App-Component {
+  background-color: aqua;
+  display: grid;
+  padding: 20px;
+  grid-template-areas: 
+  'navbar navbar navbar navbar'
+  'article article article sidebar'
+  'footer footer footer footer';
+}
+
+.Navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #d4d4d4;
+  padding: 20px;
+}
+
+.Navbar ul > li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.Article {
+  padding: 10px;
+  grid-area: article;
+}
+
+.Article .blog {
+  margin: 20px 0;
+  padding-top: 5px;
+}
+
+.Sidebar {
+  padding: 10px;
+  grid-area: sidebar;
+}
+
+.Sidebar .recent-blogs {
+  margin: 20px 0;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.Footer {
+  padding: 20px;
+  text-align: center;
+  grid-area: footer;
+}

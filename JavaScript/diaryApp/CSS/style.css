@@ -74,7 +74,7 @@ header {
     cursor: pointer;
 } 
 
-#signOut {
+#signOut, #commentSubmit {
     background-color: brown;
     color: bisque;
     text-decoration: none;
@@ -83,7 +83,7 @@ header {
     
 }
 
-#signOut:hover {
+#signOut:hover, #commentSubmit:hover {
     background-color: bisque;
     color: brown;
 }
@@ -101,3 +101,8 @@ header {
     background-color: bisque;
     color: brown;
 }
+
+/* #secretDisplay {
+    display: block !important;
+    visibility: visible !important;
+  } */

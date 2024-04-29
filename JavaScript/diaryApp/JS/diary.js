@@ -28,7 +28,8 @@ firebase.auth().onAuthStateChanged(async (user) => {
           entry.set({
             title,
             content,
-            userId: user.uid,
+            user: user.uid,
+            entry: entry.id,
             username: user.displayName,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           });
@@ -48,7 +49,7 @@ firebase.auth().onAuthStateChanged(async (user) => {
 
     let diaryContent = "";
     loadDiaryEntries.forEach((entryDoc) => {
-      let entryUserId = entryDoc.data().userId;
+      let entryUserId = entryDoc.data().user;
       let userName = entryDoc.data().username;
       let entryTitle = entryDoc.data().title;
       let entryContent = entryDoc.data().content;
