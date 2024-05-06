@@ -1,5 +1,5 @@
 function Navbar() {
-    const companyName = 'Mastering React: Your Guide to Building Dynamic Web Applications'
+    const companyName = 'Puzzle Blog'
     return (
         <nav className="Navbar">
             <h1>{companyName}</h1>
