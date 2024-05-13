@@ -6,7 +6,7 @@ function Navbar() {
             <ul>
                 <li>Home</li>
                 <li>About</li>
-                <li>Signin</li>
+                <li>Sign In</li>
 
             </ul>
         </nav>

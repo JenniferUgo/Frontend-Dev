@@ -1,0 +1,28 @@
+{
+    "blogs": [
+        {
+            "title": "weatherUpdate",
+            "content": "article1",
+            "author": "student 1",
+            "id": 1
+        },
+        {
+            "title": "weatherUpdate",
+            "content": "article2",
+            "author": "student 2",
+            "id": 2
+        },
+        {
+            "title": "weatherUpdate",
+            "content": "article3",
+            "author": "student 3",
+            "id": 3
+        },
+        {
+            "title": "weatherUpdate",
+            "content": "article4",
+            "author": "student 4",
+            "id": 4 
+        }
+    ]
+}

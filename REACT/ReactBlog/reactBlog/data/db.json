@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "title": "React Fundamentals: Understanding Components and JSX",
+            "content": "React revolutionizes web development by breaking UI into reusable components. Each component manages its own state and rendering logic. Understanding components is the foundation of React development. JSX, a syntax extension, provides a way to write HTML-like structures within your JavaScript code, making it incredibly intuitive to define the structure of your components and how they should look.",
+            "author": "student 1",
+            "id": 1
+        },
+        {
+            "title": "The Power of State and Props in React",
+            "content": "In React, components thrive on data. State represents a component's internal data that can change over time, triggering UI updates. Props, short for properties, are how components communicate with each other. They allow you to pass data from parent components to child components, creating a clean, predictable data flow. Understanding state and props is essential for building organized React applications.",
+            "author": "student 2",
+            "id": 2
+        },
+        {
+            "title": "Mastering the React Component Lifecycle",
+            "content": "React components have a well-defined lifecycle –  mounting (being added to the DOM), updating (reacting to state or prop changes), and unmounting (being removed from the DOM). React provides lifecycle methods like componentDidMount and componentWillUnmount that you can hook into to perform actions at specific phases, such as fetching data or cleaning up resources, giving you precise control.",
+            "author": "student 3",
+            "id": 3
+        },
+        {
+            "title": "titleFour",
+            "content": "article4",
+            "author": "student 4",
+            "id": 4 
+        }
+    ]
+}
