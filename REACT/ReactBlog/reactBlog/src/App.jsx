@@ -23,9 +23,10 @@ function App() {
     setPosts({...entries, newPost})
   };
 
+     // Fetch data on initial render
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:8000/posts")
+      fetch("http://localhost:3000/posts")
       .then((res) => {
         if (!res.ok) {
           throw Error("Info Not Found")
@@ -43,7 +44,20 @@ function App() {
         setError(err.message)
       })
     }, 2000)
+    }, [])
+
+
+    // fetch data on any update (blog state change)
+  useEffect(() => {
+    if(entries)
+      fetch('https://localhost:3000/posts')
+    .then((res) => {
+      return res.json()
     })
+    .then((data) => {
+      setPosts(data)
+    })
+  })
 
 
   const filteredPosts = 

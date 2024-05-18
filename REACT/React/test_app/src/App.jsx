@@ -22,9 +22,10 @@ function App() {
     setBlogs([...blogs, newBlog]) ;
   };
 
+  // Fetch data on initial render
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:3000/blogs')
+      fetch('http://localhost:8000/blogs')
       .then((res) => {
         if (!res.ok) {
           throw Error("Info not found" )
@@ -43,7 +44,21 @@ function App() {
     })
     }, 2000)
     
-  });
+  }, []);
+
+  // fetch data on any update (blog state change)
+  useEffect(() => {
+    if(blogs) {
+      fetch('http://localhost:8000/blogs')
+      .then((res) => {
+        return res.json()
+      })   
+      .then((data) => {
+      setBlogs(data)
+    })
+  }
+  }, [blogs])
+
 
   const filteredArticles = 
   blogs && blogs.filter((blog) => blog.author === 'student 2')
