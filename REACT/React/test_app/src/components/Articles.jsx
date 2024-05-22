@@ -1,8 +1,19 @@
-function Articles({ articles, title, handleNewBlog }) {
+import useFetch from "../context/useFetch";
+
+function Articles() {
+  const {
+    data: blogs, 
+    isLoading, 
+    error
+  } = useFetch('http://localhost:8000/blogs')
   return (
     <article className="Article">
-      <h2>{title}</h2>
-      {articles.map((blog) => (
+      <h2>All Blogs</h2>
+
+      {isLoading && <div>Page is loading...</div>}
+      {error && <div> {error}</div>}
+
+      {blogs && blogs.map((blog) => (
         <div className="blog" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>{blog.content}</p>
@@ -10,7 +21,6 @@ function Articles({ articles, title, handleNewBlog }) {
           <p>{blog.id}</p>
         </div>
       ))}
-      <button onClick={handleNewBlog}>Add Blog</button>
     </article>
   );
 }

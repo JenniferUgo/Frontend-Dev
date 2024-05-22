@@ -1,63 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  .App-Component {
-    background-color: aqua;
-    display: grid;
-    padding: 20px;
-    grid-template-areas: 
-    'navbar navbar navbar navbar'
-    'navigation home home sidebar'
-    'footer footer footer footer';
-  }
-  
-  .Navbar {
-    grid-area: navbar;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 1px #d4d4d4;
-    padding: 20px;
-  }
-  
-  .Navbar ul > li {
-    display: inline;
-    margin-left: 20px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-  .Navigation { 
-    position: absolute; 
-    background-color: brown;
-    color: brown;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-    grid-area: navigation;
-  }
-  
-  .Home {
-    padding: 10px;
-    grid-area: home;
-  }
-  
-  .Home .post {
-    margin: 20px 0;
-    padding-top: 5px;
-  }
-  
-  .Sidebar {
-    padding: 10px;
-    grid-area: sidebar;
-  }
-  
-  .Sidebar .recent-posts {
-    margin: 20px 0;
-    padding-top: 5px;
-    font-size: 12px;
-  }
-  
-  .Footer {
-    padding: 20px;
-    text-align: center;
-    grid-area: footer;
-  }
+.App-Component {
+  background-color: aqua;
+  display: grid;
+  padding: 20px;
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "navigation Articles Articles sidebar"
+    "footer footer footer footer";
+}
+
+.Navbar {
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #d4d4d4;
+  padding: 20px;
+}
+
+.Navbar ul > li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.Navigation {
+  position: absolute;
+  background-color: brown;
+  color: brown;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  grid-area: navigation;
+}
+
+.Articles {
+  padding: 10px;
+  grid-area: Articles;
+}
+
+.Articles .post {
+  margin: 20px 0;
+  padding-top: 5px;
+}
+
+.Sidebar {
+  padding: 10px;
+  grid-area: sidebar;
+}
+
+.Sidebar .recent-posts {
+  margin: 20px 0;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.Footer {
+  padding: 20px;
+  text-align: center;
+  grid-area: footer;
+}

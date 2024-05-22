@@ -1,16 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navigationItems = [
-  { title: "Home", link: "/" },
+  { title: <Link to='/'>Home</Link>  },
+  { title: <Link to={'/create'}>NewBlog</Link> },
   {
-    title: "About Us",
-    link: "/about",
+    title: "About Us", 
     submenu: [
       { title: "Our Team", link: "/about/team" },
       { title: "Mission", link: "/about/mission" },
     ],
-  },
-  { title: "Shop", link: "/shop" },
+  }, 
 ];
 
 function Navbar() {
