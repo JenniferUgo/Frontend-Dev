@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useFetch from "../context/useFetch";
 
 function Articles() {
@@ -15,10 +16,12 @@ function Articles() {
 
       {blogs && blogs.map((blog) => (
         <div className="blog" key={blog.id}>
+          <Link to={`/blogview/${blog.id}`}>
           <h2>{blog.title}</h2>
           <p>{blog.content}</p>
           <span>{blog.author}</span>
           <p>{blog.id}</p>
+          </Link>
         </div>
       ))}
     </article>

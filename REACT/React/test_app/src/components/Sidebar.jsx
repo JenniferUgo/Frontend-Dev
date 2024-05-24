@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useFetch from "../context/useFetch";
 
 function Sidebar() {
@@ -19,10 +20,12 @@ function Sidebar() {
 
       {filteredBlogs && filteredBlogs.map((blog) => (
         <div className="recent-blogs" key={blog.id}>
+          <Link to={`/blogview/${blog.id}`}>
           <h2>{blog.title}</h2>
           <p>{blog.content}</p>
           <span>{blog.author }</span>
           <p>{blog.id}</p>
+          </Link>
         </div>
       ))}
     </aside>

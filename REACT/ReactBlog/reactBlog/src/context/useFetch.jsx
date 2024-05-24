@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
-    const [entries, setPosts ] = useState (null)
+    const [data, setData ] = useState (null)
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
 
@@ -19,7 +19,7 @@ const useFetch = (url) => {
       })
       .then((data) => {
         setIsLoading(false)
-        setPosts(data)
+        setData(data)
         setError(null)
       })
       .catch(err => {
@@ -31,17 +31,17 @@ const useFetch = (url) => {
 
     // fetch data on any update (blog state change)
   useEffect(() => {
-    if(entries)
+    if(data)
       fetch(url)
     .then((res) => {
       return res.json()
     })
     .then((data) => {
-      setPosts(data)
+      setData(data)
     })
-  }, [entries])
+  }, [data])
 
-  return {entries, isLoading, error}
+  return {data, isLoading, error}
 }
 
 export default useFetch

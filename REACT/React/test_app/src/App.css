@@ -1,17 +1,19 @@
-*{
+* {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   background-color: #f4f4f4;
+  text-decoration: none;
+  color: inherit;
 }
 
 .App-Component {
-  background-color: #d4d4d4;
+  /* background-color: #d4d4d4; */
   display: grid;
   padding: 20px;
-  grid-template-areas: 
-  'navbar navbar navbar navbar'
-  'article article article sidebar'
-  'footer footer footer footer';
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "article article article sidebar"
+    "footer footer footer footer";
 }
 
 .Navbar {
@@ -25,6 +27,7 @@
 .Navbar ul > li {
   display: inline;
   margin-left: 20px;
+  text-decoration: none;
 }
 
 .Article {
@@ -34,7 +37,7 @@
 
 .Article .blog {
   margin: 20px 0;
-  padding-top: 5px;
+  border-bottom: solid 1px #7b7b7b;
 }
 
 .Sidebar {
@@ -44,12 +47,42 @@
 
 .Sidebar .recent-blogs {
   margin: 20px 0;
-  padding-top: 5px;
-  font-size: 12px;
+  /* padding-top: 5px;
+  font-size: 12px; */
 }
 
 .Footer {
   padding: 20px;
   text-align: center;
   grid-area: footer;
+}
+
+.Create {
+  text-align: center;
+}
+
+.Create label {
+  text-align: left;
+  display: block;
+}
+
+.Create h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.Create input,
+.Create textarea,
+.Create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: solid 1px #ddd;
+  display: block;
+}
+
+.Create button {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

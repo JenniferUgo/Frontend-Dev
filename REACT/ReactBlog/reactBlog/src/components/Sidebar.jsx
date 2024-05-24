@@ -1,32 +1,36 @@
-import useFetch from "../context/useFetch"
+import useFetch from "../context/useFetch";
+import { Link } from "react-router-dom";
 
-function Sidebar() { 
-  const {
-    entries,
+function Sidebar() {
+  const { 
+    data: posts, 
     isLoading, 
-    error
-  } = useFetch('http://localhost:3000/posts')
+    error 
+  } = useFetch("http://localhost:3000/posts");
 
   const filteredPosts =
-    entries && entries.filter((post) => post.author === 'student 2')
+    posts && posts.filter((post) => post.author === "student 2");
 
   return (
     <aside className="Sidebar">
-        <h2>Filtered Posts</h2>
+      <h2>Recent Posts</h2>
 
-        {isLoading && <div>Page is loading...</div>}
-        {error && <div> {error}</div>}
+      {isLoading && <div>Page is loading...</div>}
+      {error && <div> {error}</div>}
 
-        {entries && filteredPosts.map((post) => (
+      {filteredPosts &&
+        filteredPosts.map((post) => (
           <div className="recent-posts" key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-            <span>{post.author}</span>
-            <p>{post.id}</p>
-        </div>
+            <Link to={`/postview/${post.id}`}>
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+              <span>{post.author}</span>
+              <p>{post.id}</p>
+            </Link>
+          </div>
         ))}
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

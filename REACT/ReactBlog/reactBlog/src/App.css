@@ -1,22 +1,25 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   background-color: #f4f4f4;
+  text-decoration: none;
+  color: inherit;
 }
 
 .App-Component {
-  background-color: aqua;
+  background-color: #0c3b2e;
   display: grid;
   padding: 20px;
   grid-template-areas:
     "navbar navbar navbar navbar"
-    "navigation Articles Articles sidebar"
+    "navigation article article sidebar"
     "footer footer footer footer";
 }
 
 .Navbar {
   grid-area: navbar;
-  display: flex;
+  display: flex;  
+  background-color: #f0c38e;
   justify-content: space-between;
   border-bottom: solid 1px #d4d4d4;
   padding: 20px;
@@ -25,6 +28,19 @@
 .Navbar ul > li {
   display: inline;
   margin-left: 20px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.Navbar ul {
+  background-color: #f0c38e;
+  color: #0c3b2e;
+}
+
+.Navbar h1 {
+  background-color: #f0c38e;
+  color: #0c3b2e;
+  font-size: 36px;
 }
 
 .Navigation {
@@ -37,12 +53,16 @@
 
 .Articles {
   padding: 10px;
-  grid-area: Articles;
+  grid-area: article;
 }
 
 .Articles .post {
   margin: 20px 0;
-  padding-top: 5px;
+  border-bottom: solid 1px #0c3b2e;
+}
+
+.Articles h2 {
+  font-size: 28px;
 }
 
 .Sidebar {
@@ -52,12 +72,48 @@
 
 .Sidebar .recent-posts {
   margin: 20px 0;
-  padding-top: 5px;
-  font-size: 12px;
 }
 
 .Footer {
   padding: 20px;
   text-align: center;
   grid-area: footer;
+}
+
+.Create label {
+  text-align: left;
+  display: block;
+}
+
+.Create h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.Create input,
+.Create textarea,
+.Create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: solid 1px #0c3b2e;
+  display: block;
+}
+
+.Create button {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border-color: #f0c38e;
+  background-color: #0c3b2e;
+  color: #f0c38e;
+  font-weight: 800px;
+}
+
+.Create button:hover {
+  border-color: #0c3b2e;
+  background-color: transparent;
+  color: #0c3b2e;
+  font-weight: 800px;
 }
