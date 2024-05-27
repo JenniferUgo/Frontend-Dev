@@ -13,28 +13,16 @@
       "id": "2"
     },
     {
-      "title": "weatherUpdate",
-      "content": "article3",
-      "author": "student 3",
-      "id": "3"
-    },
-    {
-      "title": "weatherUpdate",
-      "content": "article4",
-      "author": "student 4",
-      "id": "4"
-    },
-    {
-      "id": "8a59",
-      "title": "Testing",
-      "content": "Testing the new create post page",
-      "author": ""
-    },
-    {
       "id": "2087",
       "title": "Stll testing",
       "content": "Testing the empty string on select author",
       "author": "Clyde"
+    },
+    {
+      "id": "f27b",
+      "title": "Title",
+      "content": "hhgghhghgh",
+      "author": "Bonnie"
     }
   ]
 }

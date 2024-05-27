@@ -4,19 +4,7 @@
       "title": "React Fundamentals: Understanding Components and JSX",
       "content": "React revolutionizes web development by breaking UI into reusable components. Each component manages its own state and rendering logic. Understanding components is the foundation of React development. JSX, a syntax extension, provides a way to write HTML-like structures within your JavaScript code, making it incredibly intuitive to define the structure of your components and how they should look.",
       "author": "student 1",
-      "id": 1
-    },
-    {
-      "title": "The Power of State and Props in React",
-      "content": "In React, components thrive on data. State represents a component's internal data that can change over time, triggering UI updates. Props, short for properties, are how components communicate with each other. They allow you to pass data from parent components to child components, creating a clean, predictable data flow. Understanding state and props is essential for building organized React applications.",
-      "author": "student 2",
-      "id": 2
-    },
-    {
-      "title": "Mastering the React Component Lifecycle",
-      "content": "React components have a well-defined lifecycle –  mounting (being added to the DOM), updating (reacting to state or prop changes), and unmounting (being removed from the DOM). React provides lifecycle methods like componentDidMount and componentWillUnmount that you can hook into to perform actions at specific phases, such as fetching data or cleaning up resources, giving you precise control.",
-      "author": "student 3",
-      "id": 3
+      "id": "1"
     },
     {
       "id": "dc62",
@@ -34,6 +22,18 @@
       "id": "c90a",
       "title": "Optimizing React Performance",
       "content": "React's virtual DOM and efficient diffing algorithm already make it blazing fast. However, you can squeeze out even more performance with techniques like memoization (avoiding redundant re-renders), lazy loading (loading components only when needed), and optimizing your component updates.  A focus on optimization ultimately leads to a smoother and more responsive user experience.",
+      "author": "Bonnie"
+    },
+    {
+      "id": "f658",
+      "title": "The Power of State and Props in React",
+      "content": "In React, components thrive on data. State represents a component's internal data that can change over time, triggering UI updates. Props, short for properties, are how components communicate with each other. They allow you to pass data from parent components to child components, creating a clean, predictable data flow. Understanding state and props is essential for building organized React applications.",
+      "author": "Bonnie"
+    },
+    {
+      "id": "2d41",
+      "title": "Mastering the React Component Lifecycle",
+      "content": "React components have a well-defined lifecycle –  mounting (being added to the DOM), updating (reacting to state or prop changes), and unmounting (being removed from the DOM). React provides lifecycle methods like componentDidMount and componentWillUnmount that you can hook into to perform actions at specific phases, such as fetching data or cleaning up resources, giving you precise control.",
       "author": "Bonnie"
     }
   ]

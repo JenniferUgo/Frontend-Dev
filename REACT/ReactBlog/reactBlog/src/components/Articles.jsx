@@ -12,7 +12,7 @@ function Articles() {
       <h2>All Posts</h2>
 
       {isLoading && <div>Page is loading...</div>}
-      {error && <div> {error} </div>}
+      {error && <div>{error}</div>}
 
       {posts && posts.map((post) => (
           <div className="post" key={post.id}>

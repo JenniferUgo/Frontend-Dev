@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NewPost from "./Pages/NewPost";
 import PostView from "./Pages/PostView";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<NewPost />} />
           <Route path="/postview/:id" element={<PostView />} />
+          <Route path="*" element={<NotFound/>}></Route>
         </Routes>
       </BrowserRouter>
 
